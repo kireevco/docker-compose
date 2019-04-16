@@ -14,7 +14,6 @@ RUN apk add --no-cache \
   libffi-dev \
   python-dev \
   openssl-dev \
-  make \
   && \
   if [[ "${IMAGE_TYPE}" == "fat" ]]; then \
     apk add --no-cache \
@@ -27,6 +26,7 @@ RUN apk add --no-cache \
     gnupg \
     openjdk8 \
     openssl \
+    make
   ; fi \
   && \
   pip install "docker-compose${COMPOSE_VERSION:+==}${COMPOSE_VERSION}" \

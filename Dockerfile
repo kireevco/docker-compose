@@ -14,6 +14,7 @@ RUN apk add --no-cache \
   libffi-dev \
   python-dev \
   openssl-dev \
+  make \
   && \
   if [[ "${IMAGE_TYPE}" == "fat" ]]; then \
     apk add --no-cache \
